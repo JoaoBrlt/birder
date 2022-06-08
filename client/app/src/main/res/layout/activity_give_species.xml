@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/titleEspece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Connaissez-vous cet oiseau?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageOiseau"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/titleEspece"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/gallery" />
+
+    <TextView
+        android:id="@+id/textEspece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Espèce"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageOiseau" />
+
+    <EditText
+        android:id="@+id/edit_speciesname_choice"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="Saisir un nom d'oiseau"
+        app:layout_constraintLeft_toRightOf="@id/textEspece"
+        app:layout_constraintTop_toBottomOf="@id/imageOiseau"
+        app:layout_constraintBottom_toBottomOf="@id/textEspece"/>
+
+
+    <ImageView
+        android:id="@+id/imageView_choice_search"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/edit_speciesname_choice"
+        app:layout_constraintBottom_toBottomOf="@id/edit_speciesname_choice"
+        app:layout_constraintTop_toTopOf="@+id/edit_speciesname_choice"
+        android:src="@drawable/icon_search"/>
+
+
+    <TextView
+        android:id="@+id/tv_choiceSpecies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_speciesname_choice" />
+
+    <ListView
+        android:id="@+id/list_choicesBird_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp"
+        android:choiceMode="singleChoice"
+        app:layout_constraintTop_toBottomOf="@id/tv_choiceSpecies"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

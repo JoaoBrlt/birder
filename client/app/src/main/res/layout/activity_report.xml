@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#DADADA">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/header"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		android:background="#5FC1E8">
+
+		<Button
+			android:id="@+id/button_return"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="15dp"
+			android:background="@drawable/buttonstyle"
+			android:text="Retour"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<Switch
+			android:id="@+id/switch_advanced"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Mode avancé  "
+			android:layout_marginTop="25dp"
+			android:layout_marginRight="20dp"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			/>
+
+		<TextView
+			android:id="@+id/text_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Signaler un oiseau"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			android:layout_marginTop="70dp"
+			android:paddingBottom="20dp"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@+id/header"
+		app:layout_constraintLeft_toLeftOf="parent" >
+
+		<TextView
+			android:id="@+id/text_species"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Espèce"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			android:layout_marginTop="30dp"
+			android:layout_marginLeft="40dp"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/text_speciesName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="40dp"
+			android:layout_marginTop="5dp"
+			android:ems="10"
+			android:textSize="15dp"
+			android:text="Inconnue"
+			app:layout_constraintLeft_toRightOf="@id/text_species"
+			app:layout_constraintTop_toTopOf="@id/text_species" />
+
+		<ImageView
+			android:id="@+id/imageView_report_search"
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintLeft_toRightOf="@+id/text_speciesName"
+			app:layout_constraintBottom_toBottomOf="@id/text_speciesName"
+			app:layout_constraintTop_toTopOf="@+id/text_speciesName"
+			android:src="@drawable/icon_search"/>
+
+		<ImageView
+			android:id="@+id/imageView_report_cancel"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintLeft_toRightOf="@+id/imageView_report_search"
+			app:layout_constraintBottom_toBottomOf="@id/text_speciesName"
+			app:layout_constraintTop_toTopOf="@+id/text_speciesName"
+			android:src="@drawable/cancel"/>
+
+		<TextView
+			android:id="@+id/text_number"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Nombre"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			android:layout_marginTop="80dp"
+			android:layout_marginLeft="40dp"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<EditText
+			android:id="@+id/edit_number"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="number"
+			android:hint="3"
+			android:layout_marginLeft="32dp"
+			android:layout_marginTop="75dp"
+			app:layout_constraintLeft_toRightOf="@id/text_number"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="216dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<EditText
+			android:id="@+id/edit_location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="48dp"
+			android:layout_marginTop="32dp"
+			android:ems="10"
+			android:inputType="textPersonName"
+			app:layout_constraintLeft_toRightOf="@id/image_location"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/text_choose_location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="108dp"
+			android:layout_marginRight="52dp"
+			android:clickable="true"
+			android:text="Choisir sur la carte"
+			android:textColor="#3333ff"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<ImageView
+			android:id="@+id/image_location"
+			android:layout_width="65dp"
+			android:layout_height="77dp"
+			android:layout_marginLeft="40dp"
+			android:layout_marginTop="16dp"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+		<TextView
+			android:id="@+id/text_current_location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="40dp"
+			android:layout_marginTop="108dp"
+			android:clickable="true"
+			android:text="Ma position actuelle"
+			android:textColor="#3333ff"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/layoutDateHeureGenreAge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="352dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<TextView
+			android:id="@+id/text_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="44dp"
+			android:layout_marginTop="10dp"
+			android:text="Date"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/text_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="44dp"
+			android:layout_marginTop="52dp"
+			android:text="Heure"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<EditText
+			android:id="@+id/edit_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="66dp"
+			android:clickable="true"
+			android:ems="10"
+			android:focusable="false"
+			android:inputType="none"
+			app:layout_constraintLeft_toRightOf="@id/text_date"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<EditText
+			android:id="@+id/edit_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="53dp"
+			android:layout_marginTop="45dp"
+			android:clickable="true"
+			android:ems="10"
+			android:focusable="false"
+			android:inputType="none"
+			app:layout_constraintLeft_toRightOf="@id/text_time"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/text_gender"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="44dp"
+			android:layout_marginTop="95dp"
+			android:text="Genre"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<Spinner
+			android:id="@+id/spinner_gender"
+			android:layout_width="130dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="95dp"
+			android:clickable="true"
+			android:focusable="false"
+			android:inputType="none"
+			app:layout_constraintLeft_toRightOf="@id/text_gender"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/text_age"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="260dp"
+			android:layout_marginTop="95dp"
+			android:text="Age"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<EditText
+			android:id="@+id/edit_age"
+			android:layout_width="50dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="90dp"
+			android:inputType="number"
+			app:layout_constraintLeft_toRightOf="@id/text_age"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/layoutImage"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/layoutDateHeureGenreAge">
+
+		<Button
+			android:id="@+id/edit_image_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="188dp"
+			android:background="@drawable/buttonstyle"
+			android:drawableStart="@android:drawable/ic_input_add"
+			android:text="Ajouter une image  "
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<Button
+			android:id="@+id/delete_image_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="188dp"
+			android:background="@drawable/buttonstyle"
+			android:drawableStart="@android:drawable/ic_delete"
+			android:text="Supprimer l'image  "
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent" />
+
+		<ImageView
+			android:id="@+id/image_picture"
+			android:layout_width="135dp"
+			android:layout_height="109dp"
+			android:layout_marginLeft="40dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:srcCompat="@drawable/gallery" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<Button
+		android:id="@+id/button_submit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/buttonstyle"
+		android:text="  Signaler maintenant  "
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/layoutImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

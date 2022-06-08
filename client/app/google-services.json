@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "21956172589",
+    "firebase_url": "https://birder-project.firebaseio.com",
+    "project_id": "birder-project",
+    "storage_bucket": "birder-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21956172589:android:d217bb1c59a2302a2a11a4",
+        "android_client_info": {
+          "package_name": "pns.si3.ihm.birder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21956172589-b12cqlkil2splsln2irrumhngp5ikc0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQqlz84QfFIipVL48c9vJ22lplDhZ1jYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21956172589-b12cqlkil2splsln2irrumhngp5ikc0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

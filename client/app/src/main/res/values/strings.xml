@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Birder</string>
+    <string name="title_activity_gps">GPS</string>
+    <string name="placeName">Ville inconnue</string>
+</resources>
